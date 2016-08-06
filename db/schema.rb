@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20160806035031) do
   create_table "categories", force: :cascade do |t|
     t.string   "category",    limit: 255
     t.integer  "category_id", limit: 4
+    t.integer  "level",       limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
