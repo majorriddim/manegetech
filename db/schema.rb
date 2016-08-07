@@ -14,7 +14,7 @@
 ActiveRecord::Schema.define(version: 20160806035031) do
 
   create_table "categories", force: :cascade do |t|
-    t.string   "category",    limit: 255
+    t.string   "name",        limit: 255
     t.integer  "category_id", limit: 4
     t.integer  "level",       limit: 4
     t.datetime "created_at"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20160806035031) do
   end
 
   create_table "questions", force: :cascade do |t|
+    t.string   "title",       limit: 255
     t.text     "question",    limit: 65535
     t.text     "answer",      limit: 65535
     t.integer  "category_id", limit: 4

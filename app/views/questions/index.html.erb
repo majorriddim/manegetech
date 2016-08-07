@@ -1,0 +1,12 @@
+<h1><%= @category.name %></h1>
+
+<p>index</p>
+
+
+<% @category.categories.each do |category| %>
+<p><%= link_to category.name, category_questions_path(category) %> <p>
+<% end %>
+
+<% @questions.each do |question| %>
+<p><%= link_to question.title , question %> <p>
+  <% end %>
