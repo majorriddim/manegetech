@@ -22,11 +22,15 @@ ActiveRecord::Schema.define(version: 20160806035031) do
   end
 
   create_table "questions", force: :cascade do |t|
-    t.string   "title",       limit: 255
-    t.text     "question",    limit: 65535
-    t.text     "answer",      limit: 65535
-    t.integer  "category_id", limit: 4
-    t.integer  "question_id", limit: 4
+    t.string   "title",        limit: 255
+    t.text     "question",     limit: 65535
+    t.text     "answer",       limit: 65535
+    t.integer  "category_id",  limit: 4
+    t.integer  "question1_id", limit: 4
+    t.integer  "question2_id", limit: 4
+    t.integer  "question3_id", limit: 4
+    t.integer  "question4_id", limit: 4
+    t.integer  "question5_id", limit: 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end

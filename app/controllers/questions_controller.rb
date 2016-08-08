@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  before_action :authenticate_user!, except: :index
+
   def index
     @category = Category.find params[:category_id]
     @questions = @category.questions
