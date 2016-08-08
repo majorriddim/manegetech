@@ -7,4 +7,10 @@ class QuestionsController < ApplicationController
   def show
     @question = Question.find params[:id]
   end
+
+  def search
+    @products = Question.where('title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+  end
+
+
 end
