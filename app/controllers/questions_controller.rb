@@ -8,10 +8,12 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find params[:id]
+    @questions = Question.where('id', @question.question1_id )
+
   end
 
   def search
-    @products = Question.where('title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+    @products = Question.where('title LIKE(?)', "%#{params[:keyword]}%")
   end
 
 
