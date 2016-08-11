@@ -18,7 +18,51 @@
   <% else %>
   <li><%= link_to "サインイン", '/users/sign_in' %></li>
   <% end %>
+
+
+
+  <ul id="normal" class="dropmenu">
+    <li><%= link_to 'トップページ', '/categories' %>
+    </li>
+    <li><a href="#">menu</a>
+      <ul>
+        <li><a href="#">submenu</a></li>
+        <li><a href="#">submenu</a></li>
+        <li><a href="#">submenu</a></li>
+      </ul>
+    </li>
+    <li><a href="#">menu</a>
+      <ul>
+        <li><a href="#">submenu</a></li>
+      <li><a href="#">submenu</a></li>
+        <li><a href="#">submenu</a></li>
+      </ul>
+    </li>
+    <li><a href="#">menu</a>
+      <ul>
+        <li><a href="#">submenu</a></li>
+        <li><a href="#">submenu</a></li>
+        <li><a href="#">submenu</a></li>
+        <li><a href="#">submenu</a></li>
+      </ul>
+    </li>
+    <li><%= link_to '検索', '/search' %>
+    </li>
+  </ul>
+
+
+
 <%= yield %>
 
+<p>フェイスブックとツイッターのリンク先</p>
+
 </body>
+<footer>
+<li><%= link_to 'トップページ', '/categories' %></li>
+<li>About us</li>
+<li>eachを使用してカテゴリー別リンク先を表示</li>
+<li>利用規約のリンク先</li>
+<li>特定商取引法に基づく表記</li>
+<li><%= link_to '検索', '/search' %></li>
+</footer>
 </html>

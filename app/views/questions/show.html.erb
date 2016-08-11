@@ -1,12 +1,15 @@
-<h1><%= @question.title %></h1>
+<h1>No<%= @question.id %>.<%= @question.title %></h1>
 
 <p>show</p>
 
-<p><%= @question.que %></p>
+<p><%= @question.question %></p>
 <p><%= @question.answer %></p>
 
+関連する質問タイトルプラスリンク設定
 
-関連する質問タイトルプラスリンク設定 
+<p><%= link_to @question2.title, question_path(@question2.id) %></p>
+
+
 
 
 マイQA選択ボタン
