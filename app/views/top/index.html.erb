@@ -1,0 +1,76 @@
+
+<!-- 画像部分ランダムにしたい -->
+
+  <!-- ▽main -->
+  <div id="main">
+    <h2><img src="<%= asset_path "title.png" %>"/></h2>
+    <dl>
+      <dt><img src="<%= asset_path "pic1.jpg" %>"/></dt>
+      <dd>
+        <h3><%= link_to @title1, '/questions/1', :class => 'title' %></h3>
+        <p class="category"><%= link_to @categoryname1.name, '/categories/1', :class => 'categories' %></p>
+      </dd>
+    </dl>
+
+    <dl>
+      <dt><img src="<%= asset_path "pic2.jpg" %>"/></dt>
+      <dd>
+        <h3><%= link_to @title2, '/questions/2', :class => 'title' %></h3>
+        <p class="category"><%= link_to @categoryname1.name, '/categories/1', :class => 'categories' %></p>
+      </dd>
+    </dl>
+
+    <dl>
+      <dt><img src="<%= asset_path "pic3.jpg" %>"/></dt>
+      <dd>
+        <h3><%= link_to @title3, '/questions/3', :class => 'title' %></h3>
+        <p class="category"><%= link_to @categoryname1.name, '/categories/1', :class => 'categories' %></p>
+      </dd>
+    </dl>
+
+    <dl>
+      <dt><img src="<%= asset_path "pic4.jpg" %>"/></dt>
+      <dd>
+        <h3><%= link_to @title4, '/questions/4', :class => 'title' %></h3>
+        <p class="category"><%= link_to @categoryname1.name, '/categories/1', :class => 'categories' %></p>
+      </dd>
+    </dl>
+    <p class="list"><a href="/list/"><img src="<%= asset_path "bt_list.png" %>"/></a></p>
+  </div>
+  <!-- ▲main -->
+
+  <!-- ▽side -->
+  <div id="side">
+    <h2><img src="<%= asset_path "t_rec.png" %>"/></h2>
+    <dl>
+      <dt><img src="<%= asset_path "sum1.jpg" %>"/></dt>
+      <dd>
+        <p><a href="/questions/<%= @nuber1 %>", class="fev"><%=  @titlef1 %></a></p>
+      </dd>
+      <dt><img src="<%= asset_path "sum2.jpg" %>"/></dt>
+      <dd>
+        <p><a href="/questions/<%= @nuber2 %>", class="fev"><%=  @titlef2 %></a></p>
+      </dd>
+      <dt><img src="<%= asset_path "sum3.jpg" %>"/></dt>
+      <dd>
+        <p><a href="/questions/<%= @nuber3 %>", class="fev"><%=  @titlef3 %></a></p>
+      </dd>
+      <dt><img src="<%= asset_path "sum4.jpg" %>"/></dt>
+      <dd>
+        <p><a href="/questions/<%= @nuber4 %>", class="fev"><%=  @titlef4 %></a></p>
+      </dd>
+      <dt><img src="<%= asset_path "sum5.jpg" %>"/></dt>
+      <dd>
+        <p><a href="/questions/<%= @nuber5 %>", class="fev"><%=  @titlef5 %></a></p>
+      </dd>
+      <dt><img src="<%= asset_path "sum1.jpg" %>"/></dt>
+      <dd>
+        <p><a href="/questions/<%= @nuber6 %>", class="fev"><%=  @titlef6 %></a></p>
+      </dd>
+      <dt><img src="<%= asset_path "sum2.jpg" %>"/></dt>
+      <dd>
+        <p><a href="/questions/<%= @nuber7 %>", class="fev"><%=  @titlef7 %></a></p>
+      </dd>
+    </dl>
+  </div>
+  <!-- ▲side -->

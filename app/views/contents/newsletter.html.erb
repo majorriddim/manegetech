@@ -1,0 +1,9 @@
+<h3 class='link'><img src="<%= asset_path "title/newsletter.png" %>" /></h3>
+
+
+
+<div id="main">
+  <% @newsletters.each do |newsletter| %>
+  <p class='newsletter'>・<%= link_to newsletter, newsletter.title, :class => 'newsletter' %></p>
+  <% end %>
+</div>

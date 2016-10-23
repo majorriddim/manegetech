@@ -1,0 +1,76 @@
+/*side
+***************************************/
+#side{
+  width:300px;
+  float:right;
+  margin:0px 0px 0px 0px;
+}
+#side dl{
+  width:300px;
+  padding:0px 0px 20px 0px;
+  overflow:hidden;
+  border-bottom: 1px solid #D4D4D4;
+}
+#side dt{
+  width:40px;
+  padding:20px 20px 0px 0px;
+  float:left;
+  clear:both;
+}
+#side dd{
+  width:210px;
+  padding:20px 0px 0px 0px;
+  float:right;
+}
+
+
+
+h4, h5, h6, address{
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック';
+  margin: 0;
+  padding: 0;
+  line-height:1.8;
+}
+
+h2{
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック';
+  margin: 0;
+  padding: 0;
+  line-height:1.8;
+}
+
+a.title{
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック';
+  margin: 0px 0px 0px 0px;
+  padding:  0px 0px 0px 0px;
+  line-height:4.5;
+}
+
+a.categories{
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック';
+  margin: 0;
+  padding: 0;
+  line-height:1.2.8;
+}
+
+a.fev{
+  font-size: 1em;
+  font-weight: normal;
+  font-style: normal;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック';
+  margin:  0px 0px 0px 0px;
+  padding:  0px 0px 0px 0px;
+  line-height:3.4;
+}

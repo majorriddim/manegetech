@@ -1,12 +1,19 @@
-<h1><%= @category.name %></h1>
+<!-- 画像部分ランダムにしたい -->
 
-<p>index</p>
+<link rel='stylesheet' href='css/questionindex.css' type='text/css' media='all' />
+
+
+<h2><img src="<%= asset_path "title.png" %>"/></h2>
 
 
 <% @category.categories.each do |category| %>
-<p><%= link_to category.name, category_questions_path(category) %> <p>
+<ul>
+<li class="questionindex">・<%= link_to category.name, category_questions_path(category), :class => 'questionindex' %></li>
+</ul>
 <% end %>
 
 <% @questions.each do |question| %>
-<p><%= link_to question.title, question %> <p>
-  <% end %>
+<ul>
+  <li class="questionindex">・<%= link_to question.title, question, :class => 'questionindex'  %></li>
+</ul>
+<% end %>

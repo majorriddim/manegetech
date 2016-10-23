@@ -8,8 +8,8 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find params[:id]
-    @question1 = Relation.find_by(quest: @question.id)
-    @question2 = Question.find_by(id: @question1.relation_quest)
+    # @question1 = Relation.find_by(quest: @question.id)
+    # @question2 = Question.find_by(id: @question1.relation_quest)
   end
 
   def search

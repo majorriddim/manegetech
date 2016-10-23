@@ -1,4 +1,7 @@
-<h2>会員登録</h2>
+<link rel='stylesheet' href='css/edit.css' type='text/css' media='all' />
+
+
+<h2 class='edit'>会員登録</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
@@ -11,7 +14,7 @@
   <div class="field">
     <%= f.label :パスワード %>
     <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <em>（６文字以上）</em>
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off" %>
   </div>
@@ -41,10 +44,12 @@
     <%= f.text_field :company_zyusho %>
   </div>
 
-  <%= f.label :利用規約に同意して登録します。%>
+  <div class="fieldagree">
+    <p class="agree"><a href="/static_pages/agreement" class="agree">利用規約・プライバシーの考え方</a></p>
+  </div>
 
-  <div class="actions">
-    <%= f.submit "会員登録" %>
+  <div class="actionsagree">
+    <%= f.submit "利用規約・プライバシーの考え方に同意して登録します。" %>
   </div>
 <% end %>
 

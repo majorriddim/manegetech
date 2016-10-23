@@ -1,15 +1,9 @@
-<h1>No<%= @question.id %>.<%= @question.title %></h1>
+<h3 class='link'><img src="<%= asset_path "title/title.png" %>" /></h3>
+<p class='questiontitle' ><%= @question.title  %></p>
 
-<p>show</p>
+<h3 class='link'><img src="<%= asset_path "title/question.png" %>" /></h3>
+<p class='questionque' ><%= @question.que %></p>
 
-<p><%= @question.question %></p>
-<p><%= @question.answer %></p>
-
-関連する質問タイトルプラスリンク設定
-
-<p><%= link_to @question2.title, question_path(@question2.id) %></p>
-
-
-
-
-マイQA選択ボタン
+<h3 class='link'><img src="<%= asset_path "title/answer.png" %>" /></h3>
+<p></p>
+<p class='questionans' ><%= @question.answer %></p>

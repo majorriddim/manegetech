@@ -1,0 +1,29 @@
+p.questiontitle{
+  font-size: 2em;
+  font-weight: normal;
+  font-style: normal;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック';
+  margin: 0px 0px 0px 23px;
+  padding: 0px 0px 0px 0px;
+  line-height:4.2;
+}
+
+p.questionque{
+  font-size: 2em;
+  font-weight: normal;
+  font-style: normal;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック';
+  margin: 0px 0px 0px 23px;
+  padding: 0px 0px 0px 0px;
+  line-height:4.2;
+}
+
+p.questionans{
+  font-size: 1.5em;
+  font-weight: normal;
+  font-style: normal;
+  font-family:'ヒラギノ角ゴ Pro W3','Hiragino Kaku Gothic Pro','メイリオ',Meiryo,'ＭＳ Ｐゴシック';
+  margin: 0px 0px 0px 23px;
+  padding: 0px 0px 0px 0px;
+  line-height:3;
+}

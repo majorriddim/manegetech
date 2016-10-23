@@ -1,56 +1,124 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="ja" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
 <head>
-  <title>Manetech</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  <title>mana tech</title>
+  <meta name="description" content="" />
+  <meta name="keywords" content="" />
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1 user-scalable=no">-->
+  <meta name="format-detection" content="telephone=no">
+
+
+  <!--[if IE 6]>
+  <script src="js/DD_belatedPNG_0.0.8a-min.js"></script>
+  <script>DD_belatedPNG.fix('img, .png');</script>
+  <![endif]-->
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+  <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+  <![endif]-->
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+
   <%= csrf_meta_tags %>
 
-  <ul id="normal" class="dropmenu">
-    <li><%= link_to 'トップページ', '/categories' %>
-    </li>
-    <li><a href="#">カテゴリー</a>
-      <ul>
-        <!-- eachを使用してカテゴリーを表示 -->
-        <li><a href="/categories/1">税金</a></li>
-        <li><a href="/categories/2">財務分析</a></li>
-        <li><a href="/categories/3">経営</a></li>
-        <li><a href="/categories/4">会計・帳簿関係</a></li>
-      </ul>
-    </li>
-    <li><a href="#">コンテンツ（名称未定）</a></li>
-    <li><%= link_to '検索', '/search' %>
-    </li>
-    <% if user_signed_in? %>
-    <li><a>アカウントメニュー</a>
-    <ul>
-    <li><a href="/users/<%= current_user.id %>">マイページ</a></li>
-      <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
-  </ul>
-    <% else %>
-    <li><%= link_to "ログイン", '/users/sign_in' %></li>
-    <% end %>
-  </li>
+
 
 </head>
 
 <body>
 
 
+  <!-- ▽header -->
+  <div id="header">
+    <h1><img src="<%= asset_path "logo.png" %>" /></h1>
+    <ul>
+      <li><a href="#"><img src="<%= asset_path "i_facebook.png" %>"  /></a></li>
+      <li><a href="#"><img src="<%= asset_path "i_twitter.png" %>"  /></a></li>
+      <li><a href="#"><img src="<%= asset_path "i_google.png" %>"  /></a></li>
+    </ul>
+  </div>
+  <!-- ▲header -->
+
+
+  <!-- ▽menu -->
+  <div id="menu">
+    <ul class="menu">
+      <li class="menu__single">
+        <%= link_to 'TOP', '/top/index' %>
+      </li>
+      <li class="menu__single">
+        <a class="init-bottom"><%= link_to 'TAXQA(仮称)', '/categories/1' %></a>
+      </li>
+      <li class="menu__single">
+        <a class="init-bottom"><%= link_to 'コンテンツ', '/contents/index' %></a>
+      </li>
+      <li class="menu__single">
+        <a href="#" class="init-bottom"><%= link_to '検索', '/search' %></a>
+      </li>
+
+
+    <li class="menu__single">
+    <a class="init-bottom">アカウントメニュー</a>
+    <ul class="menu__second-level">
+    <% if user_signed_in? %>
+      <li><%= button_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+    </ul>
+
+    <% else %>
+      <li><%= link_to "ログイン", '/users/sign_in' %></li>
+      <li><%= link_to "会員登録", '/users/sign_up' %></li>
+    </ul>
+    <% end %>
+  </li>
+</div>
+
+  <!-- ▲menu -->
+
+<div id="contents">
+
+<!-- ▽main -->
 <%= yield %>
+<!-- ▲main -->
 
 
-<p>フェイスブックとツイッターのリンク先</p>
+
+</div>
+
+<!-- ▽footer -->
+<div id="footer">
+
+  <!-- ▽wrapper -->
+
+  <p class="pagetop"><a><span></span></a></p>
+  <div id="footer-in">
+    <dl>
+      <dt><img src="<%= asset_path "logo.png" %>" /></dt>
+      <dd>
+        Powered by<br />
+        ｘｘｘｘｘｘｘｘｘｘｘｘｘｘ<br />
+        The Overseas Human Resources and Industry　Development Association<br />
+      </dd>
+    </dl>
+
+    <ul>
+      <li><a><%= link_to 'ABOUT US・サービスの内容', '/static_pages/about_us' %></a></li>
+      <li><a><%= link_to '利用規約・プライバシーの考え方', '/static_pages/agreement' %></a></li>
+      <li><a><%= link_to '特定商取引に基づく表示', '/static_pages/specific_trade' %></a></li>
+      <li><a><%= link_to 'TAXQA(仮称)', '/categories/1' %></a></li>
+      <li><a><%= link_to '検索', '/search' %></a></li>
+      <li><a><%= link_to 'コンテンツ', '/contents/index' %></a></li>
+
+    </ul>
+
+</div>
+<p class="copyright">Copy right (C) 2016 xxxxxxxxx xxxxxxx . All Rights Res erved.</p>
+<!-- ▲footer -->
+
+
+</div>
+<!-- ▲wrapper -->
 
 </body>
-<footer>
-<ul>
-<li>About us</li>
-<li>利用規約のリンク先</li>
-<li>特定商取引法に基づく表記</li>
-</ul>
-
-<p>Copyright © MANATECH運営局 All Rights Reserved<p>
-
-</footer>
 </html>
